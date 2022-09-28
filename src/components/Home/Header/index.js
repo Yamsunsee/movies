@@ -4,6 +4,7 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { FiPhone } from "react-icons/fi";
 import logo from "../../../images/logo.svg";
 function Header() {
+  const navLinks = ["Home", "What's on", "Shortcodes", "News", "Contact"];
   const [isRadio, setIsRadio] = useState(1);
   //   let urlImage ="https://cyber-movie-bootstrap.vercel.app/img/hero-1.jpg"
   const handlerSelectRadio = (e) => {
@@ -18,14 +19,14 @@ function Header() {
     <div
       className={
         isRadio === 1
-          ? `w-full h-[660px] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-1.jpg")] relative`
+          ? `w-full h-[660px] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-1.jpg")] relative bg-center`
           : isRadio === 2
-          ? `w-full h-[660px] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-2.jpg")] relative`
-          : `w-full h-[660px] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-3.jpg")] relative`
+          ? `w-full h-[660px] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-2.jpg")] relative bg-center`
+          : `w-full h-[660px] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-3.jpg")] relative bg-center`
       }
     >
       <div className="inset-0 bg-gradient-to-b from-transparent to-black absolute"></div>
-      <div className="2xl:max-w-[1140px] xl:max-w-[960px] max-w-[730px] my-0 mx-auto mt-4">
+      <div className="xl:max-w-[1140px] lg:max-w-[960px] max-w-[690px] md:max-w-[730px] my-0 mx-auto mt-4">
         <div className="w-full flex justify-end items-center text-[#fff] font-bold text-[16px]">
           <span className="">
             <FiPhone />
@@ -39,45 +40,15 @@ function Header() {
         </div>
         <div className="flex items-center justify-between">
           <img src={logo} alt="logo" className="cursor-pointer" />
-          {/* <div>
-            <ul className="flex items-center ">
-              <li
-                className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#fff]  pb-[20px] relative transition-all w-min-content
-           before:h-1 before:absolute before:bottom-0 before:right-0 before:transition-all before:duration-500
-          before:w-full before:left-0 before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-              >
-                HOME
-              </li>
-              <li
-                className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#fff] pb-[20px] relative transition-all w-min-content
-          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-[#fbbd61] before:transition-all before:duration-500
-          hover:before:w-full hover:before:left-0 hover:before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-              >
-                WHAT'S ON
-              </li>
-              <li
-                className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#fff] pb-[20px] relative transition-all w-min-content
-          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-[#fbbd61] before:transition-all before:duration-500
-          hover:before:w-full hover:before:left-0 hover:before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-              >
-                SHORTCODES
-              </li>
-              <li
-                className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#fff] pb-[20px] relative transition-all w-min-content
-          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-[#fbbd61] before:transition-all before:duration-500
-          hover:before:w-full hover:before:left-0 hover:before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-              >
-                NEW
-              </li>
-              <li
-                className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#fff] pb-[20px] relative transition-all w-min-content
-          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-[#fbbd61] before:transition-all before:duration-500
-          hover:before:w-full hover:before:left-0 hover:before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-              >
-                CONTACT
-              </li>
+          <div>
+            <ul className="flex items-center border-b ml-8">
+              {navLinks.map((link) => (
+                <li className="px-5 py-4 uppercase hover:text-[#ec7532] text-white text-sm font-bold lg:px-8 lg:py-6 lg:text-base">
+                  {link}
+                </li>
+              ))}
             </ul>
-          </div> */}
+          </div>
         </div>
         <div className="absolute top-[40%]">
           <div className="animate-fade-in-down">

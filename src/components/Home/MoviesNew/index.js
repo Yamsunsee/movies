@@ -3,7 +3,7 @@ import { AiFillStar } from "react-icons/ai";
 function MoviesNew() {
   const dataMoviesNew = ["The last post", "Dark and lonely", "Venture", "Hush"];
   return (
-    <div className="2xl:max-w-[1140px] max-w-[510px] my-[70px] mx-auto w-full">
+    <div className="xl:max-w-[1140px] md:max-w-[690px] lg:max-w-[960px] max-w-[510px] my-[70px] mx-auto w-full">
       <div className="w-[100%] border-b-[1px] border-gray-300">
         <h2
           className="pb-[20px] w-32 text-[#ec7532] font-medium text-[20px] relative transition-all
@@ -13,11 +13,11 @@ function MoviesNew() {
           NEW IN
         </h2>
       </div>
-      <div className="grid grid-cols-2 gap-8 mt-[50px]">
+      <div className="grid grid-cols-2 gap-8 mt-[50px] md:grid-cols-4">
         {dataMoviesNew.map((name, index) => (
-          <div>
+          <div className="flex flex-col items-center">
             <img
-              className="rounded-lg h-[330px]"
+              className="rounded-lg h-[330px] md:h-[194px] lg:h-full"
               src={`https://cyber-movie-bootstrap.vercel.app/img/movie-${
                 index + 1
               }.jpg`}

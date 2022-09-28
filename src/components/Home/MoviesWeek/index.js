@@ -42,7 +42,7 @@ function MoviesWeek() {
   ];
   return (
     <div className="w-full">
-      <div className="2xl:max-w-[1140px] max-w-[730px] my-0 mx-auto mt-[200px]">
+      <div className="xl:max-w-[1140px] lg:max-w-[960px] max-w-[730px] my-0 mx-auto mt-[200px]">
         <ul className="flex items-center border-b">
           {daysOfWeek.map((day) => (
             <li
@@ -58,13 +58,13 @@ function MoviesWeek() {
           {dataMoviesWeek.map((data, index) => {
             return (
               <div
-                className="flex flex-col mb-[40px] pb-[30px] border-b-[1px] border-gray-400"
+                className="flex flex-col md:items-center md:flex-row mb-[40px] pb-[30px] border-b-[1px] border-gray-400"
                 key={index}
               >
                 <img
                   src={data.image}
                   alt="movies"
-                  className="rounded-2xl max-w-[263px]"
+                  className="rounded-2xl max-w-[263px] md:max-h-[194px] md:mr-8"
                 />
                 <div className="">
                   <h4 className="text-[#ec7532] mt-4">
@@ -84,8 +84,8 @@ function MoviesWeek() {
                       <MdNavigateNext />
                     </span>
                   </span>
-                  <div className="w-[100%] flex flex-col">
-                    <div className="flex flex-col">
+                  <div className="w-[100%] flex flex-col md:flex-row md:justify-between md:items-center">
+                    <div className="flex flex-col lg:flex-row">
                       <div className="flex items-center">
                         <span>
                           <MdAccessTimeFilled />
