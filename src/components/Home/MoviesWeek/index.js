@@ -1,6 +1,15 @@
 import React from "react";
 import { MdNavigateNext, MdAccessTimeFilled } from "react-icons/md";
 function MoviesWeek() {
+  const daysOfWeek = [
+    { name: "Mon", isActive: true },
+    { name: "Tue", isActive: false },
+    { name: "Today", isActive: false },
+    { name: "Thu", isActive: false },
+    { name: "Fri", isActive: false },
+    { name: "Sat", isActive: false },
+    { name: "Sun", isActive: false },
+  ];
   const dataMoviesWeek = [
     {
       id: 1,
@@ -33,104 +42,72 @@ function MoviesWeek() {
   ];
   return (
     <div className="w-full">
-      <div className="max-w-[1140px] my-0 mx-auto mt-[200px]">
-        <ul className="flex items-center">
-          <li
-            className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#333]  pb-[20px] relative transition-all w-min-content
-           before:h-1 before:absolute before:bottom-0 before:right-0 before:transition-all before:duration-500
-          before:w-full before:left-0 before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-          >
-            MON
-          </li>
-          <li
-            className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#333] pb-[20px] relative transition-all w-min-content
-          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-[#fbbd61] before:transition-all before:duration-500
-          hover:before:w-full hover:before:left-0 hover:before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-          >
-            TUE
-          </li>
-          <li
-            className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#333] pb-[20px] relative transition-all w-min-content
-          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-[#fbbd61] before:transition-all before:duration-500
-          hover:before:w-full hover:before:left-0 hover:before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-          >
-            TODAY
-          </li>
-          <li
-            className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#333] pb-[20px] relative transition-all w-min-content
-          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-[#fbbd61] before:transition-all before:duration-500
-          hover:before:w-full hover:before:left-0 hover:before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-          >
-            THU
-          </li>
-          <li
-            className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#333] pb-[20px] relative transition-all w-min-content
-          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-[#fbbd61] before:transition-all before:duration-500
-          hover:before:w-full hover:before:left-0 hover:before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-          >
-            FRI
-          </li>
-          <li
-            className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#333] pb-[20px] relative transition-all w-min-content
-          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-[#fbbd61] before:transition-all before:duration-500
-          hover:before:w-full hover:before:left-0 hover:before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-          >
-            SAT
-          </li>
-          <li
-            className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#333] pb-[20px] relative transition-all w-min-content
-          before:w-0 before:h-1 before:absolute before:bottom-0 before:right-0 before:bg-[#fbbd61] before:transition-all before:duration-500
-          hover:before:w-full hover:before:left-0 hover:before:bg-[#ec7532] px-[25px] mt-[20px] mb-[15px]"
-          >
-            SUN
-          </li>
+      <div className="2xl:max-w-[1140px] max-w-[730px] my-0 mx-auto mt-[200px]">
+        <ul className="flex items-center border-b">
+          {daysOfWeek.map((day) => (
+            <li
+              className={`text-lg px-8 py-4 uppercase ${
+                day.isActive ? "text-[#ec7532] border-b-4 border-[#ec7532]" : ""
+              }`}
+            >
+              {day.name}
+            </li>
+          ))}
         </ul>
         <div className="mt-[40px]">
           {dataMoviesWeek.map((data, index) => {
             return (
               <div
-                className="flex mb-[40px] pb-[30px] border-b-[1px] border-gray-400"
+                className="flex flex-col mb-[40px] pb-[30px] border-b-[1px] border-gray-400"
                 key={index}
               >
-                <img src={data.image} alt="movies" className="rounded-2xl" />
-                <div className="ml-[40px]">
-                  <h4 className="text-[#ec7532]">ACTION, ADVENTURE, FANTASY</h4>
-                  <h2 className="text-[30px] font-[300] my-[6px]">
-                    {data.title}
-                  </h2>
+                <img
+                  src={data.image}
+                  alt="movies"
+                  className="rounded-2xl max-w-[263px]"
+                />
+                <div className="">
+                  <h4 className="text-[#ec7532] mt-4">
+                    ACTION, ADVENTURE, FANTASY
+                  </h4>
+                  <h2 className="text-2xl font-[300] my-[6px]">{data.title}</h2>
                   <p className="text-[15px] text-[#666]">
                     European mercenaries searching for black powder become
                     embroiled in the defense of It's over of China against a
                     horde of monstrous creatures.
                   </p>
                   <span className="flex items-center my-[20px] text-[#ec7532]">
-                    <span>FULL SYNOPSIS</span>
+                    <span className="tracking-[0.2rem] text-sm">
+                      FULL SYNOPSIS
+                    </span>
                     <span>
                       <MdNavigateNext />
                     </span>
                   </span>
-                  <div className="w-[100%] flex items-center justify-between">
-                    <div className="flex items-center">
-                      <span>
-                        <MdAccessTimeFilled />
-                      </span>
-                      <span className="mx-[5px]">VIEWING TIMES</span>
+                  <div className="w-[100%] flex flex-col">
+                    <div className="flex flex-col">
                       <div className="flex items-center">
-                        <button className="py-[10px] px-[15px] rounded-md text-[#fff] mx-[5px] bg-[#e3e2e2]">
+                        <span>
+                          <MdAccessTimeFilled />
+                        </span>
+                        <span className="mx-[5px] text-sm">VIEWING TIMES</span>
+                      </div>
+                      <div className="flex items-center">
+                        <button className="px-4 py-2 rounded-md text-[#717171] mx-[5px] bg-[#d8d8d8] opacity-[.65]">
                           10:30
                         </button>
-                        <button className="py-[10px] px-[15px] rounded-md text-[#fff] mx-[5px] bg-[#d2d1d1]">
+                        <button className="px-4 py-2 rounded-md text-[#717171] mx-[5px] bg-[#d8d8d8]">
                           12:30
                         </button>
-                        <button className="py-[10px] px-[15px] rounded-md text-[#fff] mx-[5px] bg-[#9b9999]">
+                        <button className="px-4 py-2 rounded-md text-[#717171] mx-[5px] bg-[#d8d8d8]">
                           14:30
                         </button>
-                        <button className="py-[10px] px-[15px] rounded-md text-[#fff] mx-[5px] bg-[#5d5d5d]">
+                        <button className="px-4 py-2 rounded-md text-[#717171] mx-[5px] bg-[#d8d8d8]">
                           16:30
                         </button>
                       </div>
                     </div>
-                    <div className="flex items-center">
+                    <div className="flex items-center mt-4">
                       <span className="text-[13px]">105 MINS </span>
                       <span className="w-8 h-8 ml-[5px] rounded-full bg-[#454545] text-[#fff] font-bold flex justify-center items-center">
                         15

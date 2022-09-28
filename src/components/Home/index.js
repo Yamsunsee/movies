@@ -11,7 +11,7 @@ function Home() {
     <div className="flex flex-col items-center">
       <Header />
       <MoviesNew />
-      {/* <MoviesWeek /> */}
+      <MoviesWeek />
       {/* <ComingSoon /> */}
       {/* <Contact /> */}
       {/* <Footer /> */}

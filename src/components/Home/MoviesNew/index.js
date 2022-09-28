@@ -1,6 +1,7 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
 function MoviesNew() {
+  const dataMoviesNew = ["The last post", "Dark and lonely", "Venture", "Hush"];
   return (
     <div className="2xl:max-w-[1140px] max-w-[510px] my-[70px] mx-auto w-full">
       <div className="w-[100%] border-b-[1px] border-gray-300">
@@ -13,27 +14,25 @@ function MoviesNew() {
         </h2>
       </div>
       <div className="grid grid-cols-2 gap-8 mt-[50px]">
-        {["The last post", "Dark and lonely", "Venture", "Hush"].map(
-          (name, index) => (
-            <div>
-              <img
-                className="rounded-lg h-[330px]"
-                src={`https://cyber-movie-bootstrap.vercel.app/img/movie-${
-                  index + 1
-                }.jpg`}
-                alt="movie"
-              />
-              <div className="flex flex-col justify-center items-center mt-4">
-                <div className="text-[#4a4a4a] text-lg">{name}</div>
-                <div className="flex text-[#fbbd61] mt-4 text-xl">
-                  {[...Array(5).keys()].map(() => (
-                    <AiFillStar />
-                  ))}
-                </div>
+        {dataMoviesNew.map((name, index) => (
+          <div>
+            <img
+              className="rounded-lg h-[330px]"
+              src={`https://cyber-movie-bootstrap.vercel.app/img/movie-${
+                index + 1
+              }.jpg`}
+              alt="movie"
+            />
+            <div className="flex flex-col justify-center items-center mt-4">
+              <div className="text-[#4a4a4a] text-lg">{name}</div>
+              <div className="flex text-[#fbbd61] mt-4 text-xl">
+                {[...Array(5).keys()].map(() => (
+                  <AiFillStar />
+                ))}
               </div>
             </div>
-          )
-        )}
+          </div>
+        ))}
       </div>
     </div>
   );
