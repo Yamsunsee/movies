@@ -4,7 +4,7 @@ import { FaFacebookF, FaTwitter, FaGooglePlusG } from "react-icons/fa";
 function Footer() {
   return (
     <div className="w-full bg-[#101010] flex justify-center">
-      <div className="xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[730px] max-w-[510px] w-full">
+      <div className="xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[730px] max-w-[510px] w-full p-2 md:p-0">
         <div className="flex xl:h-[296px] items-center">
           <div className="flex w-full flex-col py-20 gap-4 md:flex-row">
             <div className="basis-1/4">

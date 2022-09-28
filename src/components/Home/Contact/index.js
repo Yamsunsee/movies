@@ -1,7 +1,7 @@
 function Contact() {
   return (
-    <div className="max-w-[1140px] h-[300px] flex justify-center items-center">
-      <div className="flex flex-col justify-center items-center">
+    <div className="max-w-[1140px] h-[300px] flex justify-center items-center p-2 md:p-0">
+      <div className="flex flex-col justify-center items-center text-center">
         <h4 className="text-[25px] text-[#999] mb-[30px]">
           Need help? Contact our support team on
         </h4>

@@ -18,7 +18,7 @@ function ComingSoon() {
               className="absolute inset-0 w-[calc(100%-2rem)] h-full left-1/2 transform -translate-x-1/2"
               src="https://www.youtube.com/embed/tgB1wUcmbbw"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
@@ -26,10 +26,10 @@ function ComingSoon() {
         </div>
       )}
       <div
-        className={`w-full h-[600px] bg-[black] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/slide-3.png")] relative`}
+        className={`w-full bg-[black] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/slide-3.png")] relative`}
       >
         <div className="xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[730px] my-[20px] mx-auto p-2 md:p-0">
-          <div className="pt-[60px]">
+          <div className="py-[60px]">
             <div className="link active text-lg w-full pb-8 text-white w-fit">
               COMING SOON
             </div>
@@ -81,13 +81,13 @@ function ComingSoon() {
                 </div>
               </div>
               <div
-                className="relative cursor-pointer"
+                className="relative cursor-pointer overflow-hidden md:max-w-[330px] lg:max-w-[540px]"
                 onClick={() => setIsShowVideo(true)}
               >
                 <img
                   src="https://cyber-movie-bootstrap.vercel.app/img/slide-3-video.png"
                   alt="movies"
-                  className="md:max-w-[330px] lg:max-w-[540px]"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute text-white inset-0 flex justify-center items-center text-5xl">
                   <div className="p-4 border border-[#ec7532] rounded-full">
@@ -99,14 +99,14 @@ function ComingSoon() {
           </div>
         </div>
       </div>
-      <div className="w-full xl:h-[357px] py-20 bg-[#101010] flex justify-center items-center">
-        <div className="xl:max-w-[1140px] lg:max-w-[960px] max-w-[730px] grid grid-cols-3 gap-8 lg:grid-cols-6">
+      <div className="w-full xl:h-[357px] p-20 bg-[#101010] flex justify-center items-center">
+        <div className="xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[730px] w-full grid grid-cols-3 gap-8 lg:grid-cols-6">
           {[9, 8, 11, 13, 12, 14].map((url) => (
             <img
               key={url}
               src={`https://cyber-movie-bootstrap.vercel.app/img/movie-${url}.jpg`}
               alt="movies"
-              className="h-[207px] md:h-full opacity-50 hover:opacity-100 rounded-lg transition-opacity"
+              className="w-full opacity-50 hover:opacity-100 rounded-lg transition-opacity"
             />
           ))}
         </div>

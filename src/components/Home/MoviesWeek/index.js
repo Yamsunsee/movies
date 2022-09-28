@@ -1,15 +1,7 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import { MdNavigateNext, MdAccessTimeFilled } from "react-icons/md";
 function MoviesWeek() {
-  const daysOfWeek = [
-    { name: "Mon", isActive: true },
-    { name: "Tue", isActive: false },
-    { name: "Today", isActive: false },
-    { name: "Thu", isActive: false },
-    { name: "Fri", isActive: false },
-    { name: "Sat", isActive: false },
-    { name: "Sun", isActive: false },
-  ];
+  const daysOfWeek = "MON TUE TODAY THU FRI SAT SUN".split(" ");
   const dataMoviesWeek = [
     {
       id: 1,
@@ -40,23 +32,36 @@ function MoviesWeek() {
         "European mercenaries searching for black powder become embroiled in the defense of It's over of China against a horde of monstrous creatures.",
     },
   ];
+
+  const [selectedDay, setSelectedDay] = useState("MON");
+
+  const filteredMovies = useMemo(() => {
+    if (selectedDay == "MON") return dataMoviesWeek;
+    return [dataMoviesWeek[3]];
+  }, [selectedDay]);
+
+  const changeDay = (event) => {
+    const targetName = event.target.innerText;
+    setSelectedDay(targetName);
+  };
   return (
     <div className="w-full">
       <div className="xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[730px] my-0 mx-auto mt-[200px] p-2 md:p-0">
         <ul className="flex sm:items-center border-b flex-col sm:flex-row">
           {daysOfWeek.map((day) => (
             <li
-              key={day.name}
+              key={day}
+              onClick={changeDay}
               className={`link text-lg lg:px-8 lg:py-4 md:px-6 md:py-4 p-4 uppercase ${
-                day.isActive ? "text-[#ec7532] lg:active" : ""
+                selectedDay == day ? "text-[#ec7532] lg:active" : ""
               }`}
             >
-              {day.name}
+              {day}
             </li>
           ))}
         </ul>
         <div className="mt-[40px]">
-          {dataMoviesWeek.map((data, index) => {
+          {filteredMovies.map((data, index) => {
             return (
               <div
                 className="flex flex-col md:items-center md:flex-row mb-[40px] pb-[30px] border-b-[1px] border-gray-400"
