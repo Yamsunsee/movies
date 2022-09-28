@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .link {
+    position: relative;
+  }
+
+  .link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(to right, #fbbd61, #ec7532);
+    box-shadow: 0 0 20px 0 #fbbd61;
+    transition: all 0.5s;
+  }
+
+  .link.active::before {
+    width: 100%;
+  }
+
+  .link:hover::before {
+    width: 100%;
+  }
+}

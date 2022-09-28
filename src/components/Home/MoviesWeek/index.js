@@ -42,12 +42,13 @@ function MoviesWeek() {
   ];
   return (
     <div className="w-full">
-      <div className="xl:max-w-[1140px] lg:max-w-[960px] max-w-[730px] my-0 mx-auto mt-[200px]">
-        <ul className="flex items-center border-b">
+      <div className="xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[730px] my-0 mx-auto mt-[200px] p-2 md:p-0">
+        <ul className="flex sm:items-center border-b flex-col sm:flex-row">
           {daysOfWeek.map((day) => (
             <li
-              className={`text-lg px-8 py-4 uppercase ${
-                day.isActive ? "text-[#ec7532] border-b-4 border-[#ec7532]" : ""
+              key={day.name}
+              className={`link text-lg lg:px-8 lg:py-4 md:px-6 md:py-4 p-4 uppercase ${
+                day.isActive ? "text-[#ec7532] lg:active" : ""
               }`}
             >
               {day.name}
