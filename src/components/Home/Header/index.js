@@ -85,7 +85,7 @@ function Header() {
               ACTION, ADVENTURE, FANTASY
             </span>
           </div>
-          <div className="text-5xl md:text-2xl text-[#fff] font-[500] animate-fade-in-down">
+          <div className="text-4xl md:text-5xl lg:text-6xl text-[#fff] font-[500] animate-fade-in-down">
             {isRadio === 1
               ? "End of the World: Part I"
               : isRadio === 2
@@ -94,7 +94,7 @@ function Header() {
               ? "End of the World: Part III"
               : null}
           </div>
-          <div className="text-[#fff] font-medium animate-fade-in-up">
+          <div className="text-[#fff] font-medium animate-fade-in-up mt-4">
             Claritas est etiam processus dynamicus, qui sequitur mutationem
             consuetudium lectorum. Mirum est notare quam <br /> littera gothica,
             quam nunc putamu.
