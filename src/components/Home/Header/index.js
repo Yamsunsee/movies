@@ -24,7 +24,8 @@ function Header() {
           : `w-full h-[660px] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-3.jpg")] relative`
       }
     >
-      <div className="max-w-[1140px] my-0 mx-auto pt-[20px]">
+      <div className="inset-0 bg-gradient-to-b from-transparent to-black absolute"></div>
+      <div className="2xl:max-w-[1140px] xl:max-w-[960px] max-w-[730px] my-0 mx-auto mt-4">
         <div className="w-full flex justify-end items-center text-[#fff] font-bold text-[16px]">
           <span className="">
             <FiPhone />
@@ -38,7 +39,7 @@ function Header() {
         </div>
         <div className="flex items-center justify-between">
           <img src={logo} alt="logo" className="cursor-pointer" />
-          <div>
+          {/* <div>
             <ul className="flex items-center ">
               <li
                 className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#fff]  pb-[20px] relative transition-all w-min-content
@@ -76,15 +77,15 @@ function Header() {
                 CONTACT
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
         <div className="absolute top-[40%]">
           <div className="animate-fade-in-down">
-            <span className="text-[#fbbd61] font-medium ">
+            <span className="text-[#fbbd61] font-small">
               ACTION, ADVENTURE, FANTASY
             </span>
           </div>
-          <div className="my-[5px] text-[60px] text-[#fff] font-[500] animate-fade-in-down">
+          <div className="text-[60px] text-[#fff] font-[500] animate-fade-in-down">
             {isRadio === 1
               ? "End of the World: Part I"
               : isRadio === 2
@@ -98,18 +99,18 @@ function Header() {
             consuetudium lectorum. Mirum est notare quam <br /> littera gothica,
             quam nunc putamu.
           </div>
-          <div className="flex items-center animate-fade-in-up">
-            <div className="w-[50px] h-[50px] mt-[20px] rounded-[50%] border-[2px] border-white relative mr-[10px]">
+          <div className="flex items-center animate-fade-in-up mt-8">
+            <div className="w-[50px] h-[50px] rounded-[50%] border-[2px] border-white relative mr-[10px]">
               <span className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#fff]">
                 PG
               </span>
             </div>
-            <div className="w-[250px] mt-[20px] h-[50px] bg-gradient-to-r from-[#fbbd61] to-[#ec7532] rounded-3xl relative cursor-pointer ">
-              <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-[#fff] flex items-center">
-                <span>
+            <div className="bg-gradient-to-r from-[#fbbd61] to-[#ec7532] cursor-pointer p-3 rounded-full">
+              <div className="text-white flex items-center min-w-[192px] justify-center">
+                <span className="flex items-center text-xl mr-2">
                   <BsFillPlayFill />
                 </span>
-                <span className="font-medium">PLAY TRAILER</span>
+                <span className="text-sm tracking-[0.3rem]">PLAY TRAILER</span>
               </div>
             </div>
           </div>

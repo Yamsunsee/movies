@@ -8,43 +8,61 @@ function Footer() {
           <div className="flex w-full">
             <div className="basis-1/4">
               <h3 className="text-[#ec7532] text-[20px]">GET IN TOUCH</h3>
-              <ul>
-                <li className="text-[#fff] hover:text-[#fbbd61]">FAQs</li>
-                <li className="text-[#fff] hover:text-[#fbbd61]">
+              <ul className="mt-4 text-sm flex flex-col gap-1">
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
+                  FAQs
+                </li>
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
                   Give us feedback
                 </li>
-                <li className="text-[#fff] hover:text-[#fbbd61]">Contact us</li>
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
+                  Contact us
+                </li>
               </ul>
             </div>
             <div className="basis-1/4">
               <h3 className="text-[#ec7532] text-[20px]">ABOUT MOVIE STAR</h3>
-              <ul>
-                <li className="text-[#fff] hover:text-[#fbbd61]">About us</li>
-                <li className="text-[#fff] hover:text-[#fbbd61]">Find us</li>
-                <li className="text-[#fff] hover:text-[#fbbd61]">Schedule</li>
-                <li className="text-[#fff] hover:text-[#fbbd61]">News</li>
+              <ul className="mt-4 text-sm flex flex-col gap-1">
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
+                  About us
+                </li>
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
+                  Find us
+                </li>
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
+                  Schedule
+                </li>
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
+                  News
+                </li>
               </ul>
             </div>
             <div className="basis-1/4">
               <h3 className="text-[#ec7532] text-[20px]">LEGAL STUFF</h3>
-              <ul>
-                <li className="text-[#fff] hover:text-[#fbbd61]">
+              <ul className="mt-4 text-sm flex flex-col gap-1">
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
                   Terms & Conditions
                 </li>
-                <li className="text-[#fff] hover:text-[#fbbd61]">
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
                   Privacy policy
                 </li>
-                <li className="text-[#fff] hover:text-[#fbbd61]">
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
                   Cookie policy
                 </li>
               </ul>
             </div>
             <div className="basis-1/4">
               <h3 className="text-[#ec7532] text-[20px]">CONNECT WITH US</h3>
-              <ul>
-                <li className="text-[#fff] hover:text-[#fbbd61]">Facebook</li>
-                <li className="text-[#fff] hover:text-[#fbbd61]">Twitter</li>
-                <li className="text-[#fff] hover:text-[#fbbd61]">Google +</li>
+              <ul className="mt-4 text-sm flex flex-col gap-1">
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
+                  Facebook
+                </li>
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
+                  Twitter
+                </li>
+                <li className="text-[#fff] hover:text-[#fbbd61] cursor-pointer transition-all">
+                  Google +
+                </li>
               </ul>
             </div>
           </div>

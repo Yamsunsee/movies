@@ -11,10 +11,10 @@ function Home() {
     <div className="flex flex-col items-center">
       <Header />
       <MoviesNew />
-      <MoviesWeek />
-      <ComingSoon />
-      <Contact />
-      <Footer />
+      {/* <MoviesWeek /> */}
+      {/* <ComingSoon /> */}
+      {/* <Contact /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
