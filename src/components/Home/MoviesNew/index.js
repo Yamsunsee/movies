@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillStar } from "react-icons/ai";
 function MoviesNew() {
   return (
-    <div className="w-[80%] my-[70px] mx-auto">
+    <div className="max-w-[1140px] my-[70px] mx-auto">
       <div className="w-[100%] border-b-[1px] border-gray-300 ">
         <h2
           className="pb-[20px] w-[10%] text-[#ec7532] font-medium text-[20px] relative transition-all
@@ -16,7 +16,7 @@ function MoviesNew() {
         <div className="relative">
           <div className="relative">
             <img
-              className="rounded-lg"
+              className="rounded-lg h-[330px]"
               src="https://cyber-movie-bootstrap.vercel.app/img/movie-1.jpg"
               alt="movie"
             />

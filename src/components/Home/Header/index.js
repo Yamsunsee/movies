@@ -18,13 +18,13 @@ function Header() {
     <div
       className={
         isRadio === 1
-          ? `w-full h-[80vh] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-1.jpg")] relative`
+          ? `w-full h-[660px] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-1.jpg")] relative`
           : isRadio === 2
-          ? `w-full h-[80vh] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-2.jpg")] relative`
-          : `w-full h-[80vh] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-3.jpg")] relative`
+          ? `w-full h-[660px] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-2.jpg")] relative`
+          : `w-full h-[660px] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/hero-3.jpg")] relative`
       }
     >
-      <div className="w-[80%] my-0 mx-auto pt-[20px]">
+      <div className="max-w-[1140px] my-0 mx-auto pt-[20px]">
         <div className="w-full flex justify-end items-center text-[#fff] font-bold text-[16px]">
           <span className="">
             <FiPhone />
@@ -85,7 +85,13 @@ function Header() {
             </span>
           </div>
           <div className="my-[5px] text-[60px] text-[#fff] font-[500] animate-fade-in-down">
-            {isRadio ===  1 ? "End of the World: Part I": isRadio ===  2 ? "End of the World: Part II": isRadio ===  3 ? "End of the World: Part III" : null}
+            {isRadio === 1
+              ? "End of the World: Part I"
+              : isRadio === 2
+              ? "End of the World: Part II"
+              : isRadio === 3
+              ? "End of the World: Part III"
+              : null}
           </div>
           <div className="text-[#fff] font-medium animate-fade-in-up">
             Claritas est etiam processus dynamicus, qui sequitur mutationem

@@ -32,9 +32,9 @@ function MoviesWeek() {
     },
   ];
   return (
-    <div className="w-[100%] ">
-      <div className="w-[80%] my-0 mx-auto mt-[200px]">
-        <ul className="flex items-center ">
+    <div className="w-full">
+      <div className="max-w-[1140px] my-0 mx-auto mt-[200px]">
+        <ul className="flex items-center">
           <li
             className="text-[18px] font-[400] border-b-[1px] border-gray-300 cursor-pointer text-[#333]  pb-[20px] relative transition-all w-min-content
            before:h-1 before:absolute before:bottom-0 before:right-0 before:transition-all before:duration-500
@@ -88,12 +88,11 @@ function MoviesWeek() {
         <div className="mt-[40px]">
           {dataMoviesWeek.map((data, index) => {
             return (
-              <div className="flex mb-[40px] pb-[30px] border-b-[1px] border-gray-400" key={index}>
-                <img
-                  src={data.image}
-                  alt="movies"
-                  className="rounded-2xl"
-                />
+              <div
+                className="flex mb-[40px] pb-[30px] border-b-[1px] border-gray-400"
+                key={index}
+              >
+                <img src={data.image} alt="movies" className="rounded-2xl" />
                 <div className="ml-[40px]">
                   <h4 className="text-[#ec7532]">ACTION, ADVENTURE, FANTASY</h4>
                   <h2 className="text-[30px] font-[300] my-[6px]">
@@ -133,7 +132,7 @@ function MoviesWeek() {
                     </div>
                     <div className="flex items-center">
                       <span className="text-[13px]">105 MINS </span>
-                      <span className="p-[10px] ml-[5px] rounded-[50%] bg-[#454545] text-[#fff] font-bold">
+                      <span className="w-8 h-8 ml-[5px] rounded-full bg-[#454545] text-[#fff] font-bold flex justify-center items-center">
                         15
                       </span>
                     </div>

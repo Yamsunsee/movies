@@ -9,7 +9,7 @@ function ComingSoon() {
       <div
         className={`w-full h-[600px] bg-[black] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/slide-3.png")] relative`}
       >
-        <div className="w-[80%] my-[20px] mx-auto">
+        <div className="max-w-[1140px] my-[20px] mx-auto">
           <div className="pt-[60px]">
             <span
               className="text-[18px] font-[600] border-b-[1px] border-gray-300 cursor-pointer text-[#fff]  pb-[20px] relative transition-all w-min-content
@@ -18,7 +18,7 @@ function ComingSoon() {
             >
               COMING SOON
             </span>
-            <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] w-[80%] flex items-center justify-between">
+            <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-w-[1140px] w-full flex items-center justify-between">
               <div>
                 <h3 className="text-[#ec7532]">COMEDY, CRIME</h3>
                 <h3 className="text-[#fff] font-[300] text-[40px]">
@@ -86,33 +86,15 @@ function ComingSoon() {
           </div>
         </div>
       </div>
-      <div className="w-full h-[400px] bg-[black] relative">
-        <div className="w-[80%] my-0 mx-auto flex flex-items justify-between absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-          <img
-            src="https://cyber-movie-bootstrap.vercel.app/img/movie-9.jpg"
-            alt="movies"
-            className="w-[20%] h-[20%] p-[20px] opacity-[0.5] hover:opacity-[1] rounded-[30px]"
-          />
-          <img
-            src="https://cyber-movie-bootstrap.vercel.app/img/movie-8.jpg"
-            alt="movies"
-            className="w-[20%] h-[20%] p-[20px] opacity-[0.5] hover:opacity-[1] rounded-[30px]"
-          />
-          <img
-            src="https://cyber-movie-bootstrap.vercel.app/img/movie-11.jpg"
-            alt="movies"
-            className="w-[20%] h-[20%] p-[20px] opacity-[0.5] hover:opacity-[1] rounded-[30px]"
-          />
-          <img
-            src="https://cyber-movie-bootstrap.vercel.app/img/movie-13.jpg"
-            alt="movies"
-            className="w-[20%] h-[20%] p-[20px] opacity-[0.5] hover:opacity-[1] rounded-[30px]"
-          />
-          <img
-            src="https://cyber-movie-bootstrap.vercel.app/img/movie-12.jpg"
-            alt="movies"
-            className="w-[20%] h-[20%] p-[20px] opacity-[0.5] hover:opacity-[1] rounded-[30px]"
-          />
+      <div className="w-full h-[357px] bg-[#101010] flex justify-center items-center">
+        <div className="max-w-[1140px] flex justify-between w-full">
+          {[9, 8, 11, 13, 12, 14].map((url) => (
+            <img
+              src={`https://cyber-movie-bootstrap.vercel.app/img/movie-${url}.jpg`}
+              alt="movies"
+              className="h-[207px] opacity-[0.5] hover:opacity-[1] rounded-lg"
+            />
+          ))}
         </div>
       </div>
     </>
