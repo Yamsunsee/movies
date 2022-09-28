@@ -1,5 +1,6 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
+import { BsFillPlayFill } from "react-icons/bs";
 function MoviesNew() {
   const dataMoviesNew = ["The last post", "Dark and lonely", "Venture", "Hush"];
   return (
@@ -11,13 +12,26 @@ function MoviesNew() {
       <div className="grid grid-cols-2 gap-8 mt-[50px] md:grid-cols-4">
         {dataMoviesNew.map((name, index) => (
           <div key={name} className="flex flex-col items-center">
-            <img
-              className="rounded-lg sm:h-[330px] md:h-[194px] lg:h-full"
-              src={`https://cyber-movie-bootstrap.vercel.app/img/movie-${
-                index + 1
-              }.jpg`}
-              alt="movie"
-            />
+            <div className="group relative image rounded-lg">
+              <img
+                className="rounded-lg sm:h-[330px] md:h-[194px] lg:h-full"
+                src={`https://cyber-movie-bootstrap.vercel.app/img/movie-${
+                  index + 1
+                }.jpg`}
+                alt="movie"
+              />
+              <div className="image-overlay"></div>
+              <div className="opacity-0 group-hover:opacity-100 transition-all duration-1000 absolute text-white inset-0 flex flex-col justify-center items-center text-5xl">
+                <div className="p-4 border-2 border--white rounded-full">
+                  <BsFillPlayFill />
+                </div>
+                <div className="tracking-[0.2rem] text-sm mt-4 uppercase">
+                  Readmore
+                </div>
+                <div className="text-base mt-4">Released: 7 Mar, 2017</div>
+              </div>
+            </div>
+
             <div className="flex flex-col justify-center items-center mt-4">
               <div className="text-[#4a4a4a] text-lg">{name}</div>
               <div className="flex text-[#fbbd61] mt-4 text-xl">

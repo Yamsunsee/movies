@@ -30,11 +30,13 @@ function NavFixed() {
           </div>
           {isShow && (
             <div className="fixed w-full left-0 right-0 p-2 top-24 z-20">
-              <ul className="bg-black/80 text-center">
+              <ul className="bg-black/90 text-center">
                 {navLinks.map((link) => (
                   <li
                     key={link}
-                    className="px-5 py-4 uppercase hover:text-[#ec7532] text-white text-sm font-bold lg:px-8 lg:py-6 lg:text-base cursor-pointer"
+                    className={`px-5 py-4 uppercase text-white text-sm font-bold lg:px-8 lg:py-6 lg:text-base cursor-pointer ${
+                      link == "Home" ? "text-[#ec7532]" : "link"
+                    }`}
                   >
                     {link}
                   </li>

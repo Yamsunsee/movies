@@ -54,7 +54,9 @@ function Header() {
                 {navLinks.map((link) => (
                   <li
                     key={link}
-                    className="px-5 py-4 uppercase hover:text-[#ec7532] text-white text-sm font-bold lg:px-8 lg:py-6 lg:text-base cursor-pointer"
+                    className={`px-5 py-4 uppercase text-white text-sm font-bold lg:px-8 lg:py-6 lg:text-base cursor-pointer ${
+                      link == "Home" ? "text-[#ec7532]" : "link"
+                    }`}
                   >
                     {link}
                   </li>
@@ -103,12 +105,14 @@ function Header() {
                 PG
               </span>
             </div>
-            <div className="bg-gradient-to-r from-[#fbbd61] to-[#ec7532] cursor-pointer p-3 rounded-full">
+            <div className="button bg-gradient-to-r from-[#fbbd61] to-[#ec7532] cursor-pointer p-3 rounded-full">
               <div className="text-white flex items-center min-w-[192px] justify-center">
-                <span className="flex items-center text-xl mr-2">
+                <span className="flex items-center text-xl mr-2 z-10">
                   <BsFillPlayFill />
                 </span>
-                <span className="text-sm tracking-[0.3rem]">PLAY TRAILER</span>
+                <span className="text-sm tracking-[0.3rem] z-10">
+                  PLAY TRAILER
+                </span>
               </div>
             </div>
           </div>
