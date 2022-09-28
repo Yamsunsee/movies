@@ -9,17 +9,17 @@ function ComingSoon() {
       <div
         className={`w-full h-[600px] bg-[black] bg-cover bg-[url("https://cyber-movie-bootstrap.vercel.app/img/slide-3.png")] relative`}
       >
-        <div className="max-w-[1140px] my-[20px] mx-auto">
+        <div className="2xl:max-w-[1140px] max-w-[730px] my-[20px] mx-auto">
           <div className="pt-[60px]">
             <span
               className="text-[18px] font-[600] border-b-[1px] border-gray-300 cursor-pointer text-[#fff]  pb-[20px] relative transition-all w-min-content
            before:h-1 before:absolute before:bottom-0 before:right-0 before:transition-all before:duration-500
-          before:w-full before:left-0 before:bg-[#ec7532] mt-[20px] mb-[15px]"
+          before:w-full before:left-0 before:bg-[#ec7532] mt-[20px] mb-[15px] w-full"
             >
               COMING SOON
             </span>
-            <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-w-[1140px] w-full flex items-center justify-between">
-              <div>
+            <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 2xl:max-w-[1140px] max-w-[730px] w-full flex items-center justify-between">
+              <div className="min-w-[417px]">
                 <h3 className="text-[#ec7532]">COMEDY, CRIME</h3>
                 <h3 className="text-[#fff] font-[300] text-[40px]">
                   The Hangover Part III
@@ -58,7 +58,7 @@ function ComingSoon() {
                   prison and is on the run.
                 </h3>
                 <div className="flex items-center mt-[30px] text-[#ec7532]">
-                  <span className="font-medium ">MORE INFOR </span>
+                  <span className="text-sm tracking-[0.2rem]">MORE INFOR </span>
                   <span className="">
                     <MdNavigateNext />
                   </span>
@@ -86,8 +86,8 @@ function ComingSoon() {
           </div>
         </div>
       </div>
-      <div className="w-full h-[357px] bg-[#101010] flex justify-center items-center">
-        <div className="max-w-[1140px] flex justify-between w-full">
+      <div className="w-full 2xl:h-[357px] h-[554px] bg-[#101010] flex justify-center items-center">
+        <div className="2xl:max-w-[1140px] max-w-[730px] grid grid-cols-3 gap-8">
           {[9, 8, 11, 13, 12, 14].map((url) => (
             <img
               src={`https://cyber-movie-bootstrap.vercel.app/img/movie-${url}.jpg`}

@@ -12,9 +12,9 @@ function Home() {
       <Header />
       <MoviesNew />
       <MoviesWeek />
-      {/* <ComingSoon /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <ComingSoon />
+      <Contact />
+      <Footer />
     </div>
   );
 }
